@@ -32,7 +32,7 @@ class GRAFO():
             del self.grafo[vertice]
 
     def tem_aresta(self, vertice1, vertice2):
-        if vertice1 not in self.grafo or vertice1 not in self.grafo:
+        if vertice1 not in self.grafo or vertice2 not in self.grafo:
             return False
         for i in self.grafo[vertice1]:
             if i[0] == vertice2:
