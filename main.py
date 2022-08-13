@@ -38,7 +38,7 @@ class GRAFO():
         aresta = ""
         for key, value in self.grafo.items():
             for i in value:
-                aresta += str(i) + " ->"
+                aresta += str(i) + " -> "
             print(f"{key} : {aresta}")
             aresta = ""
 
@@ -58,9 +58,9 @@ def main():
     grafo1.adiciona_vertice("A")
     grafo1.adiciona_aresta("A", "B", 3)
     grafo1.adiciona_aresta("A", "C", 3)
-    print(grafo1.tem_aresta("B","C"))
-    print(grafo1.grau("C"))
-    print(grafo1.peso("B", "C"))
+    print("tem aresta:",(grafo1.tem_aresta("B","C")))
+    print("grau:",(grafo1.grau("C")))
+    print("peso:",(grafo1.peso("B", "C")))
     grafo1.imprime_lista_adjacencias()
 
 if __name__ == "__main__":
