@@ -1,4 +1,4 @@
-class GRAFO():
+class GRAFO:
     def __init__(self):
         self.grafo = {}
 
@@ -24,7 +24,6 @@ class GRAFO():
         else:
             print(f"Aresta entre {vertice1} -> {vertice2} não existe")
 
-
     def remove_vertice(self, vertice):
         if vertice not in self.grafo:
             print(f"Vertice {vertice} não existe")
@@ -43,19 +42,19 @@ class GRAFO():
         if self.tem_aresta(vertice1, vertice2):
             for i in self.grafo[vertice1]:
                 if i[0] == vertice2:
-                    return i[1]
+                    return f"peso: {i[1]}"
         return f"Aresta entre {vertice1} -> {vertice2} não existe"
 
     def grau(self, vertice):
         if vertice in self.grafo:
-            return len(self.grafo[vertice])
+            return f"grau: {len(self.grafo[vertice])}"
         return f"Vertice {vertice} não existe"
 
     def imprime_lista_adjacencias(self):
         aresta = ""
         for key, value in self.grafo.items():
             for i in value:
-                aresta += str(i) + " ->"
+                aresta += str(i) + " -> "
             print(f"{key} : {aresta}")
             aresta = ""
 
@@ -76,7 +75,6 @@ def main():
     print(grafo1.peso("A", "B"))
     print(grafo1.peso("A", "Z"))
     print(grafo1.grau("C"))
-
 
 
 if __name__ == "__main__":
